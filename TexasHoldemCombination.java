@@ -63,10 +63,15 @@ public final class TexasHoldemCombination implements Comparable<TexasHoldemCombi
                 this.combinationType = CombinationType.StraightFlush;
             }
         }
-        if(isFullHouse((List.copyOf(blatt).stream())) == 2){
+        else if(findPairs((List.copyOf(blatt).stream())) == 4){
 
         }
+        else if(isFullHouse((List.copyOf(blatt).stream())) == 2){
 
+        }
+        else if(findPairs((List.copyOf(blatt).stream())) == 3 || (findPairs((List.copyOf(blatt).stream())) == 2)){
+
+        }else{};
     }
 
     public long findPairs (Stream<CardDeck52.Card> stream){
